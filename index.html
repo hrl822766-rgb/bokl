@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f7f2">
+    <meta name="description" content="מדריך פשוט ואמין לטיפול בחיות מחמד: מה הן אוכלות, איך דואגים להן וממה חשוב להיזהר.">
+    <title>חבר על ארבע — מדריך הטיפול בחיות</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Rubik:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="חבר על ארבע — לעמוד הבית">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>חבר על ארבע<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="ניווט ראשי">
+        <a class="nav-link active" href="#animals">מדריך החיות</a>
+        <a class="nav-link" href="#about">איך זה עובד?</a>
+      </nav>
+      <a class="header-cta" href="#animals">מוצאים חבר <span aria-hidden="true">←</span></a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> כל מה שצריך לדעת כדי לדאוג להם</span>
+          <h1 id="hero-title">כי הם חלק מהמשפחה.<br><span>בואו נדאג להם</span> כמו שצריך.</h1>
+          <p class="hero-description">מדריך ידידותי ופשוט שיעזור לכם להבין את החבר שלכם — מה הוא אוהב לאכול, איך לטפל בו וממה כדאי להיזהר.</p>
+          <a class="primary-button" href="#animals">בוחרים חיה <span aria-hidden="true">↓</span></a>
+          <div class="hero-note"><span aria-hidden="true">♡</span> מידע שעוזר לכם להיות החברים הכי טובים שלהם</div>
+        </div>
+        <div class="hero-art" aria-label="איור של כלב וחתול">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-sun"></div>
+          <div class="art-label label-top"><span class="label-icon">✿</span> אהבה, אוכל וטיפול</div>
+          <div class="animal-illustration">
+            <div class="pet-cat"><span class="cat-ear cat-ear-left"></span><span class="cat-ear cat-ear-right"></span><span class="cat-face"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="nose"></i><i class="whiskers"></i></span><span class="cat-body"></span><span class="cat-tail"></span></div>
+            <div class="pet-dog"><span class="dog-ear dog-ear-left"></span><span class="dog-ear dog-ear-right"></span><span class="dog-face"><i class="dog-eye dog-eye-left"></i><i class="dog-eye dog-eye-right"></i><i class="dog-snout"></i><i class="dog-nose"></i></span><span class="dog-body"></span><span class="dog-leg leg-one"></span><span class="dog-leg leg-two"></span><span class="dog-tail"></span></div>
+            <span class="sparkle sparkle-one">✦</span><span class="sparkle sparkle-two">✧</span><span class="sparkle sparkle-three">✦</span>
+          </div>
+          <div class="art-label label-bottom"><span class="label-icon">♥</span> החברים שלנו, כל יום</div>
+        </div>
+        <div class="hero-bottom"><span>01 / 06</span><span class="bottom-line"></span><span>מתחילים עם החבר שלכם</span></div>
+      </section>
+
+      <section class="guide-section" id="animals" aria-labelledby="guide-title">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow section-eyebrow">מדריך החיות שלנו</span>
+            <h2 id="guide-title">מי החבר שלכם?</h2>
+            <p>בחרו חיה כדי לגלות איך לתת לה את הטיפול הכי טוב.</p>
+          </div>
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <span class="visually-hidden">חיפוש חיה</span>
+            <input id="animal-search" type="search" placeholder="מחפשים חיה?" autocomplete="off">
+            <kbd>⌘ K</kbd>
+          </label>
+        </div>
+
+        <div class="filter-row" role="group" aria-label="סינון לפי סוג חיה">
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">כל החיות <span>06</span></button>
+          <button class="filter-button" type="button" data-filter="mammal" aria-pressed="false">יונקים</button>
+          <button class="filter-button" type="button" data-filter="bird" aria-pressed="false">ציפורים</button>
+          <button class="filter-button" type="button" data-filter="reptile" aria-pressed="false">זוחלים</button>
+          <button class="filter-button" type="button" data-filter="fish" aria-pressed="false">דגים</button>
+        </div>
+
+        <div class="animal-grid" id="animal-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>לא מצאנו חיה כזאת. נסו לחפש שוב.</p>
+        <div class="safety-note" id="about">
+          <span class="safety-icon" aria-hidden="true">✳</span>
+          <div><strong>חשוב לזכור: כל חיה היא עולם ומלואו.</strong><p>המידע באתר הוא כללי ונועד לעזור. במקרה של חשש, שינוי בהתנהגות או שאלה רפואית — תמיד מתייעצים עם וטרינר.</p></div>
+          <span class="safety-arrow" aria-hidden="true">↙</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">✳</span><span>חבר על ארבע<span class="brand-dot">.</span></span></a>
+      <span>עושים טוב, חבר אחד בכל פעם.</span>
+      <span class="footer-year">מדריך טיפול באהבה <span aria-hidden="true">♡</span></span>
+    </footer>
+
+    <dialog class="animal-dialog" id="animal-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="סגירה">×</button>
+      <div id="dialog-content"></div>
+    </dialog>
+  </body>
+</html>
