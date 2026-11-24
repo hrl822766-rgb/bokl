@@ -2,12 +2,12 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10151c">
-<title>בריחה מיואב — המשחק</title>
+<title>בריחה מבולבול ענק — המשחק</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#10151c;color:#f4f7f5;font-family:Arial,sans-serif;display:grid;place-items:center;min-height:100vh;padding:18px}.wrap{width:min(920px,100%);text-align:center}h1{margin:0 0 8px;font-size:clamp(28px,5vw,48px)}p{color:#c3cfca;margin:8px 0 16px}canvas{display:block;width:100%;height:auto;border:3px solid #42514b;border-radius:16px;background:#18231f;box-shadow:0 20px 60px #0008;touch-action:none}.hint{font-size:14px;color:#aab8b1}.hud{display:flex;justify-content:center;gap:24px;margin:12px;font-weight:bold}.hud span{color:#a6f27a}button{border:0;border-radius:999px;background:#9be86a;color:#14200e;font-weight:bold;padding:12px 24px;font-size:16px;cursor:pointer;margin:10px}
 </style>
 </head>
-<body><main class="wrap"><h1>☣️ בריחה מיואב!</h1><p>רוצו, קפצו והתחמקו מהעננים הירוקים של המפלצת.</p><div class="hud"><div>ניקוד: <span id="score">0</span></div><div>חיים: <span id="lives">3</span></div></div><canvas id="game" width="900" height="480" aria-label="משחק בריחה ממפלצת"></canvas><button id="restart">מתחילים מחדש</button><p class="hint">תנועה: ← → או A / D · קפיצה: רווח / ↑ · בטלפון: נגיעה בצד שמאל או ימין</p></main>
+<body><main class="wrap"><h1>☣️ בריחה מבולבול ענק!</h1><p>רוצו, קפצו והתחמקו מהעננים הירוקים של המפלצת.</p><div class="hud"><div>ניקוד: <span id="score">0</span></div><div>חיים: <span id="lives">3</span></div></div><canvas id="game" width="900" height="480" aria-label="משחק בריחה ממפלצת"></canvas><button id="restart">מתחילים מחדש</button><p class="hint">תנועה: ← → או A / D · קפיצה: רווח / ↑ · בטלפון: נגיעה בצד שמאל או ימין</p></main>
 <script>
 (()=>{const c=document.getElementById('game'),x=c.getContext('2d'),scoreEl=document.getElementById('score'),livesEl=document.getElementById('lives');let keys={},player,monster,shots,stars,score,lives,frame,over;
 function reset(){player={x:120,y:370,w:38,h:58,vy:0,on:true};monster={x:30,y:285};shots=[];stars=[];score=0;lives=3;frame=0;over=false;scoreEl.textContent=0;livesEl.textContent=3;for(let i=0;i<7;i++)stars.push({x:350+i*100,y:220+Math.random()*140,taken:false});}
