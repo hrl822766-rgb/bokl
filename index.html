@@ -1,96 +1,24 @@
 <!doctype html>
 <html lang="he" dir="rtl">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f8f7f2">
-    <meta name="description" content="מדריך פשוט ואמין לטיפול בחיות מחמד: מה הן אוכלות, איך דואגים להן וממה חשוב להיזהר.">
-    <title>חבר על ארבע — מדריך הטיפול בחיות</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Rubik:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#" aria-label="חבר על ארבע — לעמוד הבית">
-        <span class="brand-mark" aria-hidden="true">✳</span>
-        <span>חבר על ארבע<span class="brand-dot">.</span></span>
-      </a>
-      <nav class="main-nav" aria-label="ניווט ראשי">
-        <a class="nav-link active" href="#animals">מדריך החיות</a>
-        <a class="nav-link" href="#about">איך זה עובד?</a>
-      </nav>
-      <a class="header-cta" href="#animals">מוצאים חבר <span aria-hidden="true">←</span></a>
-    </header>
-
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> כל מה שצריך לדעת כדי לדאוג להם</span>
-          <h1 id="hero-title">כי הם חלק מהמשפחה.<br><span>בואו נדאג להם</span> כמו שצריך.</h1>
-          <p class="hero-description">מדריך ידידותי ופשוט שיעזור לכם להבין את החבר שלכם — מה הוא אוהב לאכול, איך לטפל בו וממה כדאי להיזהר.</p>
-          <a class="primary-button" href="#animals">בוחרים חיה <span aria-hidden="true">↓</span></a>
-          <div class="hero-note"><span aria-hidden="true">♡</span> מידע שעוזר לכם להיות החברים הכי טובים שלהם</div>
-        </div>
-        <div class="hero-art" aria-label="איור של כלב וחתול">
-          <div class="art-orbit orbit-one"></div>
-          <div class="art-orbit orbit-two"></div>
-          <div class="art-sun"></div>
-          <div class="art-label label-top"><span class="label-icon">✿</span> אהבה, אוכל וטיפול</div>
-          <div class="animal-illustration">
-            <div class="pet-cat"><span class="cat-ear cat-ear-left"></span><span class="cat-ear cat-ear-right"></span><span class="cat-face"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="nose"></i><i class="whiskers"></i></span><span class="cat-body"></span><span class="cat-tail"></span></div>
-            <div class="pet-dog"><span class="dog-ear dog-ear-left"></span><span class="dog-ear dog-ear-right"></span><span class="dog-face"><i class="dog-eye dog-eye-left"></i><i class="dog-eye dog-eye-right"></i><i class="dog-snout"></i><i class="dog-nose"></i></span><span class="dog-body"></span><span class="dog-leg leg-one"></span><span class="dog-leg leg-two"></span><span class="dog-tail"></span></div>
-            <span class="sparkle sparkle-one">✦</span><span class="sparkle sparkle-two">✧</span><span class="sparkle sparkle-three">✦</span>
-          </div>
-          <div class="art-label label-bottom"><span class="label-icon">♥</span> החברים שלנו, כל יום</div>
-        </div>
-        <div class="hero-bottom"><span>01 / 24</span><span class="bottom-line"></span><span>מתחילים עם החבר שלכם</span></div>
-      </section>
-
-      <section class="guide-section" id="animals" aria-labelledby="guide-title">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow section-eyebrow">מדריך החיות שלנו</span>
-            <h2 id="guide-title">מי החבר שלכם?</h2>
-            <p>בחרו חיה כדי לגלות איך לתת לה את הטיפול הכי טוב.</p>
-          </div>
-          <label class="search-box">
-            <span class="search-icon" aria-hidden="true">⌕</span>
-            <span class="visually-hidden">חיפוש חיה</span>
-            <input id="animal-search" type="search" placeholder="מחפשים חיה?" autocomplete="off">
-            <kbd>⌘ K</kbd>
-          </label>
-        </div>
-
-        <div class="filter-row" role="group" aria-label="סינון לפי סוג חיה">
-          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">כל החיות <span>24</span></button>
-          <button class="filter-button" type="button" data-filter="mammal" aria-pressed="false">יונקים</button>
-          <button class="filter-button" type="button" data-filter="bird" aria-pressed="false">ציפורים</button>
-          <button class="filter-button" type="button" data-filter="reptile" aria-pressed="false">זוחלים</button>
-          <button class="filter-button" type="button" data-filter="fish" aria-pressed="false">דגים</button>
-        </div>
-
-        <div class="animal-grid" id="animal-grid" aria-live="polite"></div>
-        <p class="empty-state" id="empty-state" hidden>לא מצאנו חיה כזאת. נסו לחפש שוב.</p>
-        <div class="safety-note" id="about">
-          <span class="safety-icon" aria-hidden="true">✳</span>
-          <div><strong>חשוב לזכור: כל חיה היא עולם ומלואו.</strong><p>המידע באתר הוא כללי ונועד לעזור. במקרה של חשש, שינוי בהתנהגות או שאלה רפואית — תמיד מתייעצים עם וטרינר.</p></div>
-          <span class="safety-arrow" aria-hidden="true">↙</span>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">✳</span><span>חבר על ארבע<span class="brand-dot">.</span></span></a>
-      <span>עושים טוב, חבר אחד בכל פעם.</span>
-      <span class="footer-year">מדריך טיפול באהבה <span aria-hidden="true">♡</span></span>
-    </footer>
-
-    <dialog class="animal-dialog" id="animal-dialog" aria-labelledby="dialog-title">
-      <button class="dialog-close" type="button" aria-label="סגירה">×</button>
-      <div id="dialog-content"></div>
-    </dialog>
-  </body>
-</html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10151c">
+<title>בריחה מיואב — המשחק</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#10151c;color:#f4f7f5;font-family:Arial,sans-serif;display:grid;place-items:center;min-height:100vh;padding:18px}.wrap{width:min(920px,100%);text-align:center}h1{margin:0 0 8px;font-size:clamp(28px,5vw,48px)}p{color:#c3cfca;margin:8px 0 16px}canvas{display:block;width:100%;height:auto;border:3px solid #42514b;border-radius:16px;background:#18231f;box-shadow:0 20px 60px #0008;touch-action:none}.hint{font-size:14px;color:#aab8b1}.hud{display:flex;justify-content:center;gap:24px;margin:12px;font-weight:bold}.hud span{color:#a6f27a}button{border:0;border-radius:999px;background:#9be86a;color:#14200e;font-weight:bold;padding:12px 24px;font-size:16px;cursor:pointer;margin:10px}
+</style>
+</head>
+<body><main class="wrap"><h1>☣️ בריחה מיואב!</h1><p>רוצו, קפצו והתחמקו מהעננים הירוקים של המפלצת.</p><div class="hud"><div>ניקוד: <span id="score">0</span></div><div>חיים: <span id="lives">3</span></div></div><canvas id="game" width="900" height="480" aria-label="משחק בריחה ממפלצת"></canvas><button id="restart">מתחילים מחדש</button><p class="hint">תנועה: ← → או A / D · קפיצה: רווח / ↑ · בטלפון: נגיעה בצד שמאל או ימין</p></main>
+<script>
+(()=>{const c=document.getElementById('game'),x=c.getContext('2d'),scoreEl=document.getElementById('score'),livesEl=document.getElementById('lives');let keys={},player,monster,shots,stars,score,lives,frame,over;
+function reset(){player={x:120,y:370,w:38,h:58,vy:0,on:true};monster={x:30,y:285};shots=[];stars=[];score=0;lives=3;frame=0;over=false;scoreEl.textContent=0;livesEl.textContent=3;for(let i=0;i<7;i++)stars.push({x:350+i*100,y:220+Math.random()*140,taken:false});}
+addEventListener('keydown',e=>{keys[e.key.toLowerCase()]=true;if([' ','arrowup','arrowleft','arrowright'].includes(e.key.toLowerCase()))e.preventDefault();if(over&&e.key==='Enter')reset()});addEventListener('keyup',e=>keys[e.key.toLowerCase()]=false);
+let touchSide=0;c.addEventListener('pointerdown',e=>{const r=c.getBoundingClientRect();touchSide=(e.clientX-r.left)/r.width<.5?-1:1;if(player.on&&e.clientY<r.top+r.height*.65)player.vy=-13});c.addEventListener('pointerup',()=>touchSide=0);document.getElementById('restart').onclick=reset;
+function draw(){x.clearRect(0,0,900,480);let g=x.createLinearGradient(0,0,0,480);g.addColorStop(0,'#263a35');g.addColorStop(1,'#111b19');x.fillStyle=g;x.fillRect(0,0,900,480);for(let i=0;i<9;i++){x.fillStyle='#30463e';x.fillRect(i*115,320+(i%3)*12,65,160)}x.fillStyle='#65736b';x.fillRect(0,430,900,50);x.fillStyle='#9be86a';x.fillRect(0,430,900,5);
+// monster
+x.fillStyle='#050807';x.beginPath();x.arc(monster.x+75,monster.y+55,62,0,Math.PI*2);x.fill();x.fillRect(monster.x+25,monster.y+90,100,150);x.fillStyle='#b8ff62';x.fillRect(monster.x+42,monster.y+45,14,9);x.fillRect(monster.x+91,monster.y+45,14,9);x.fillStyle='#4dff42';x.fillRect(monster.x+58,monster.y+83,35,7);x.fillStyle='#273b25';x.fillRect(monster.x+42,monster.y+235,24,70);x.fillRect(monster.x+90,monster.y+235,24,70);
+// player
+x.fillStyle='#f4c58d';x.beginPath();x.arc(player.x+19,player.y+12,14,0,Math.PI*2);x.fill();x.fillStyle='#48a8ff';x.fillRect(player.x+5,player.y+27,28,28);x.fillStyle='#202c38';x.fillRect(player.x+7,player.y+52,9,13);x.fillRect(player.x+24,player.y+52,9,13);
+shots.forEach(s=>{x.fillStyle='#65f542';x.beginPath();x.arc(s.x,s.y,s.r,0,Math.PI*2);x.fill();x.fillStyle='#b5ff79';x.beginPath();x.arc(s.x-3,s.y-3,3,0,Math.PI*2);x.fill()});stars.forEach(s=>{if(!s.taken){x.fillStyle='#ffd95e';x.font='27px Arial';x.fillText('★',s.x,s.y)}});
+if(over){x.fillStyle='#000a';x.fillRect(0,0,900,480);x.fillStyle='white';x.textAlign='center';x.font='bold 48px Arial';x.fillText('המשחק נגמר!',450,220);x.font='24px Arial';x.fillText('ניקוד: '+score+' · לחצו על מתחילים מחדש',450,270);x.textAlign='start';}}
+function tick(){if(!over){frame++;if(keys['arrowleft']||keys['a']||touchSide===-1)player.x-=5;if(keys['arrowright']||keys['d']||touchSide===1)player.x+=5;if((keys[' ']||keys['arrowup']||keys['w'])&&player.on){player.vy=-13;player.on=false}player.vy+=.62;player.y+=player.vy;if(player.y>370){player.y=370;player.vy=0;player.on=true}player.x=Math.max(0,Math.min(860,player.x));if(frame%78===0)shots.push({x:monster.x+100,y:monster.y+130,vx:5+Math.random()*2,vy:(Math.random()-.5)*2,r:13});shots.forEach(s=>{s.x+=s.vx;s.y+=s.vy+Math.sin(frame/12);if(s.x>player.x&&s.x<player.x+player.w&&s.y>player.y&&s.y<player.y+player.h){s.x=1000;lives--;livesEl.textContent=lives;if(lives<=0)over=true}});shots=shots.filter(s=>s.x<950);stars.forEach(s=>{if(!s.taken&&Math.abs(player.x-s.x)<24&&Math.abs(player.y-s.y)<45){s.taken=true;score+=10;scoreEl.textContent=score}});if(frame%500===0)stars.push({x:300+Math.random()*550,y:250+Math.random()*120,taken:false});monster.x=Math.min(65,monster.x+.02)}draw();requestAnimationFrame(tick)}reset();tick();})();
+</script></body></html>
